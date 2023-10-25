@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000435; /* Result page background color */
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Age</h1>
+        <p><b><span id="result"></span></b></p>
+    </div>
+    <script>
+        var params = new URLSearchParams(window.location.search);
+        var result = params.get("result");
+        document.getElementById("result").innerText = result;
+    </script>
+</body>
+</html>
